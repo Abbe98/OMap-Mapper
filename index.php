@@ -4,7 +4,7 @@ include 'core/int.php';
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Map OMapper</title>
+		<title>OMap Mapper</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<meta charset="utf-8" />
 

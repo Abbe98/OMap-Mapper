@@ -106,6 +106,10 @@ aside div[role="button"] span:last-child {
 	text-align: center;
 }
 
+aside form {
+	margin-left: 5px;
+}
+
 /*
 *** Icons
 */
@@ -155,4 +159,11 @@ aside div[role="button"] span:last-child {
 
 .icon-bookmark:before {
 	content: "\e608";
+}
+
+/*
+*** Other
+*/
+.hide {
+	display: none;
 }
