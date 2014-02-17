@@ -33,11 +33,11 @@ include 'core/int.php';
 					}
 				} else {
 			?>
-				<div role="button"><span class="icon-compass"></span><span>New</span></div>
-				<div role="button"><span class="icon-bookmark"></span><span>About</span></div>
-				<div role="button"><span class="icon-github"></span><span>Source Code</span></div>
-				<div role="button"><span class="icon-cog"></span><span>Settings</span></div>
-				<div role="button"><span class="icon-bug"></span><span>Report Bugs</span></div>
+				<div role="button" onclick="location.href='index.php?a=new'"><span class="icon-compass"></span><span>New</span></div>
+				<div role="button"><span class="icon-bookmark"></span><span>About</span></div><!-- force about -->
+				<div role="button" onclick="location.href='https://github.com'"><span class="icon-github"></span><span>Source Code</span></div><!-- fix link when public -->
+				<div role="button"><span class="icon-cog"></span><span>Settings</span></div><!-- force settings -->
+				<div role="button" onclick="location.href='https://github.com'"><span class="icon-bug"></span><span>Report Bugs</span></div><!-- fix link when public -->
 			<?php
 				}
 			?>
