@@ -22,6 +22,15 @@ aside, nav {
 	-moz-transition: .4s;
 	transition: .4s;
 }
+
+/*
+*** Links
+*/
+a {
+	text-decoration: none;
+	color: #F76D22;
+}
+
 /*
 *** Navbar
 */
