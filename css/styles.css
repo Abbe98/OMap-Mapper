@@ -6,7 +6,8 @@ html, body, #map {
 	margin: 0;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	line-height: 1.42857
+	line-height: 1.42857;
+	color: rgb(51, 51, 51);
 }
 
 aside, nav {
@@ -16,6 +17,11 @@ aside, nav {
 	z-index: 1;
 }
 
+* {
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	transition: .4s;
+}
 /*
 *** Navbar
 */
@@ -23,9 +29,9 @@ nav {
 	height: 40px;
 	width: 100%;
 	
-	-webkit-box-shadow: inset 0px -2px 1px 0px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: inset 0px -2px 1px 0px rgba(0, 0, 0, 0.4);
-	box-shadow: inset 0px -2px 1px 0px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
+	-moz-box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
+	box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
 }
 
 nav ul,
@@ -43,23 +49,51 @@ li {
 nav ul li {
 	padding: 10.5px 20px;
 	font-size: 120%;
-}
-
-li:not(:first-child) {
 	float: right;
 }
+li:first-child {
+	float: left;
+	font-weight: 800;
+}
 
+li:not(:first-child):hover {
+	color: #F76D22;
+	cursor: pointer;
+}
 /*
-*** side
+*** Side
 */
 aside {
 	height: 100%;
 	margin-top: 40px;
 	width: 20%;
 	
-	-webkit-box-shadow: inset -2px 0px 1px 0px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: inset -2px 0px 1px 0px rgba(0, 0, 0, 0.4);
-	box-shadow: inset -2px 0px 1px 0px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
+	-moz-box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
+	box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
+}
+
+/*
+*** Side-Start
+*/
+
+aside div[role="button"] {
+	float: left;
+	margin: 20px;
+}
+
+aside div[role="button"]:hover {
+	color: #F76D22;
+	cursor: pointer;
+}
+
+aside div[role="button"] span:first-child {
+	font-size: 900%;
+}
+
+aside div[role="button"] span:last-child {
+	display: block;
+	text-align: center;
 }
 
 /*
