@@ -23,7 +23,15 @@ include 'core/int.php';
 			</ul>
 		</nav>
 		<aside>
-			content
+			<?php
+				if ($_GET['a'] === 'new') {
+					# code... include new.php
+				} elseif ($_GET['a'] === 'show' && isset($_GET['id']) === false && empty($_GET['id']) === true) {
+					# code... include show and read from db.
+				} else {
+					#just include the default one.
+				}
+			?>
 		</aside>
 		<div id="map"></div>
 
