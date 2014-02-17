@@ -49,11 +49,6 @@ li:not(:first-child) {
 	float: right;
 }
 
-li a {
-	color: black;
-	text-decoration: none;
-}
-
 /*
 *** side
 */
@@ -112,4 +107,8 @@ aside {
 }
 .icon-lab:before {
 	content: "\e607";
+}
+
+.icon-bookmark:before {
+	content: "\e608";
 }

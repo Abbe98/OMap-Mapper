@@ -17,19 +17,28 @@ include 'core/int.php';
 		<nav>
 			<ul>
 				<li>OMap Mapper</li>
-				<li><a class="icon-bug" href="#"></a></li>
-				<li><a class="icon-github" href="#"></a></li>
-				<li><span class="icon-cog" href="#"></span></li><!-- trigger settnings -->
+				<li><span class="icon-cog"></span></li><!-- trigger settnings -->
+				<li><span class="icon-bookmark"></span></li><!-- trigger about -->
 			</ul>
 		</nav>
 		<aside>
 			<?php
-				if ($_GET['a'] === 'new') {
-					# code... include new.php
-				} elseif ($_GET['a'] === 'show' && isset($_GET['id']) === false && empty($_GET['id']) === true) {
-					# code... include show and read from db.
+				if (isset($_GET['a']) === true && empty($_GET['a']) === false) {
+					if ($_GET['a'] === 'new') {
+						include 'new.php';
+					} elseif ($_GET['a'] === 'show' && isset($_GET['id']) === true && empty($_GET['id']) === false) {
+						include 'show.php';
+					} else {
+						echo 'Error: 1';
+					}
 				} else {
-					#just include the default one.
+			?>
+				<div role="button"><span class="icon-compass"></span>New</div>
+				<div role="button"><span class="icon-bookmark"></span>About</div>
+				<div role="button"><span class="icon-github"></span>Source Code</div>
+				<div role="button"><span class="icon-cog"></span>Settings</div>
+				<div role="button"><span class="icon-bug"></span>Report Bugs</div>
+			<?php
 				}
 			?>
 		</aside>
