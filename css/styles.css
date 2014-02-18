@@ -110,6 +110,14 @@ aside form {
 	margin-left: 5px;
 }
 
+#aside_new {
+	display: none;
+}
+
+#aside_main {
+	display: block;
+}
+
 /*
 *** Icons
 */
