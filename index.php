@@ -17,22 +17,11 @@ include 'core/int.php';
 		<nav>
 			<ul>
 				<li>OMap Mapper</li>
-				<li><span class="icon-cog"></span></li><!-- trigger settnings -->
+				<li><span class="icon-cog"></span></li><!-- trigger settings -->
 				<li><span class="icon-bookmark"></span></li><!-- trigger about -->
 			</ul>
 		</nav>
 		<aside>
-			<?php
-				if (isset($_GET['a']) === true && empty($_GET['a']) === false) {
-					if ($_GET['a'] === 'new') {
-						include 'new.php';
-					} elseif ($_GET['a'] === 'show' && isset($_GET['id']) === true && empty($_GET['id']) === false) {
-						include 'show.php';
-					} else {
-						echo 'Error: 1';
-					}
-				} else {
-			?>
 			<div id="aside_main">
 				<div role="button" onclick="toggleNew()"><span class="icon-compass"></span><span>New</span></div>
 				<div role="button"><span class="icon-bookmark"></span><span>About</span></div><!-- force about -->
@@ -42,19 +31,17 @@ include 'core/int.php';
 			</div>
 			<div id="aside_new">
 				<form action="" method="post">
-					<label>Name: <input type="text" name="name" /></label><br>
+					<label>Name:* <input type="text" name="name" /></label><br>
 					<label>Date: <input type="date" name="date" /></label><br>
-					<label>Location: <input type="text" value="" class="hide" name="location" /><button>Choose Location</button></label><br>
+					<label>Location:* <input type="text" value="" class="hide" name="location" /><button>Choose Location</button></label><br>
 					<label>Map: <input type="file" name="map1" /></label><br>
 					<label>Map: <input type="file" name="map2" /></label><br>
 					<label>Map: <input type="file" name="map3" /></label><br>
 					<label>Map: <input type="file" name="map4" /></label><br>
-					<label>Map: <input type="file" name="map5" /></label>
+					<label>Map: <input type="file" name="map5" /></label><br>
+					<input type="submit" value="Save" />
 				</form>
 			</div>
-			<?php
-				}
-			?>
 		</aside>
 		<div id="map"></div>
 
