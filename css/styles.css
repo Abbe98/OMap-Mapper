@@ -175,3 +175,10 @@ aside form {
 .hide {
 	display: none;
 }
+
+/* overwrite leaflet styles */
+#map,
+.leaflet-dragging.leaflet-container,
+.leaflet-dragging .leaflet-clickable {
+	cursor: move;
+}

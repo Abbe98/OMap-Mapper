@@ -20,3 +20,25 @@ function validateForm() {
     return false;
   }
 }
+
+function getLocation() {
+  var m = document.getElementById('map');
+  var btn = document.getElementById('locationselector');
+
+  m.style.cursor = 'crosshair';
+  btn.value = 'Click a location on the map.';
+  
+
+  map.on('click', function(e) {
+    var l = e.latlng.toString();
+    l = l.substr(0, l.length-1);
+    l = l.substr(7);
+
+    //string test:
+    //alert("You clicked the map at " + l);
+
+    document.forms['new']['location'].value = l;
+    btn.value = 'done';
+    m.style.cursor = 'move';
+  });
+}

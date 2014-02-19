@@ -33,7 +33,7 @@ include 'core/int.php';
 				<form action="" method="post" name="new" onsubmit="return validateForm()">
 					<label>Name:* <input type="text" name="name" /></label><br>
 					<label>Date: <input type="date" name="date" /></label><br>
-					<label>Location:* <input type="text" value="" class="hide" name="location" /><button>Choose Location</button></label><br>
+					<label>Location:* <input type="text" value="" class="hide" name="location" /><input type="button" id="locationselector" onclick="getLocation();" value="Location"/></label><br>
 					<label>Map: <input type="file" name="map1" /></label><br>
 					<label>Map: <input type="file" name="map2" /></label><br>
 					<label>Map: <input type="file" name="map3" /></label><br>
