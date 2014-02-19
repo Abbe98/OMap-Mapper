@@ -30,7 +30,7 @@ include 'core/int.php';
 				<div role="button" onclick="location.href='https://github.com'"><span class="icon-bug"></span><span>Report Bugs</span></div><!-- fix link when public -->
 			</div>
 			<div id="aside_new">
-				<form action="" method="post">
+				<form action="" method="post" name="new" onsubmit="return validateForm()">
 					<label>Name:* <input type="text" name="name" /></label><br>
 					<label>Date: <input type="date" name="date" /></label><br>
 					<label>Location:* <input type="text" value="" class="hide" name="location" /><button>Choose Location</button></label><br>
@@ -50,7 +50,7 @@ include 'core/int.php';
 		<script src="js/map_config.js"></script>
 		<script src="js/leaflet.markercluster.js"></script>
 		<script src="geojsonp_data.php"></script>
-		<script src="js/toggle.js"></script>
+		<script src="js/functions.js"></script>
 
 		<script>
 		var markers = L.markerClusterGroup();
