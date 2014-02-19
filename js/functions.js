@@ -38,7 +38,7 @@ function getLocation() {
     //alert("You clicked the map at " + l);
 
     document.forms['new']['location'].value = l;
-    btn.value = 'done';
+    btn.value = l;
     m.style.cursor = 'move';
   });
 }
