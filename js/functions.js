@@ -33,10 +33,7 @@ function getLocation() {
     var l = e.latlng.toString();
     l = l.substr(0, l.length-1);
     l = l.substr(7);
-
-    //string test:
-    //alert("You clicked the map at " + l);
-
+    
     document.forms['new']['location'].value = l;
     btn.value = l;
     m.style.cursor = 'move';
