@@ -18,6 +18,15 @@ if (empty($_POST) === false) {
 	if(!move_uploaded_file($_FILES['map']['tmp_name'], 'usercontent/' . $_FILES['map']['name'])){
 		die('Error: Uploading file - check that destination is writeable.');
 	}
+
+	$save = array(
+			'name' => $_POST['name'],
+			'location' => $_POST['location'],
+			'date' => $_POST['date'],
+			'map' => $_FILES['map']['name']
+		);
+
+	save($save);
 }
 
 
