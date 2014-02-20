@@ -48,13 +48,13 @@ if (empty($_POST) === false) {
 			<ul>
 				<li>OMap Mapper</li>
 				<li><span class="icon-cog"></span></li><!-- trigger settings -->
-				<li><span class="icon-bookmark"></span></li><!-- trigger about -->
+				<li><span class="icon-bookmark" onclick="openClose('about');"></span></li><!-- trigger about -->
 			</ul>
 		</nav>
 		<aside>
 			<div id="aside_main">
 				<div role="button" onclick="toggle('aside_main', 'aside_new')"><span class="icon-compass"></span><span>New</span></div>
-				<div role="button"><span class="icon-bookmark"></span><span>About</span></div><!-- force about -->
+				<div role="button"><span class="icon-bookmark" onclick="openClose('about');"></span><span>About</span></div><!-- force about -->
 				<div role="button" onclick="location.href='https://github.com'"><span class="icon-github"></span><span>Source Code</span></div><!-- fix link when public -->
 				<div role="button"><span class="icon-cog"></span><span>Settings</span></div><!-- force settings -->
 				<div role="button" onclick="location.href='https://github.com'"><span class="icon-bug"></span><span>Report Bugs</span></div><!-- fix link when public -->
@@ -70,7 +70,7 @@ if (empty($_POST) === false) {
 			</div>
 		</aside>
 		<section id="about">
-			<span class="close">X</span>
+			<span class="close" onclick="openClose('about');">X</span>
 			<h1>About</h1>
 			<p>OMap Mapper is developed by Albin Larsson. Current version: <?php echo $GLOBALS['config']['v']; ?>.</p>
 		</section>

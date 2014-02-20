@@ -1,3 +1,12 @@
+function openClose(element1) {
+  var e = document.getElementById(element1);
+  if(e.offsetWidth > 0 || e.offsetHeight > 0) {
+    e.style.display = 'none';
+  } else {
+    e.style.display = 'block';
+  }
+}
+
 function toggle(element1, element2) {
   var e = document.getElementById(element1);
   var se = document.getElementById(element2);
