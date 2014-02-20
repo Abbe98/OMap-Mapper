@@ -1,6 +1,6 @@
-function toggleNew() {
-  var e = document.getElementById('aside_main');
-  var se = document.getElementById('aside_new');
+function toggleNew(element1, element2) {
+  var e = document.getElementById(element1);
+  var se = document.getElementById(element2);
   if(e.offsetWidth > 0 || e.offsetHeight > 0) {
     e.style.display = 'none';
     se.style.display = 'block';
