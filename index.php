@@ -78,6 +78,15 @@ if (empty($_POST) === false) {
 			<span class="close" onclick="openClose('settings');">X</span>
 			<h1>Settings</h1>
 			<p>Nothing here yet... :-(</p>
+			<?php
+$database = Database::getInstanse();
+
+$database ->query("SELECT `map`, `name`, `location`, `date` FROM `locations`");
+$rows = $database->resultset();
+echo "<pre>";
+print_r($rows);
+echo "</pre>";
+			?>
 		</section>
 		<div id="map"></div>
 
