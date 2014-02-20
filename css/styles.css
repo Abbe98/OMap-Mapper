@@ -150,7 +150,8 @@ section h1 {
 	margin-top: 0;
 }
 
-#about {
+#about,
+#settings {
 	display: none;
 }
 
