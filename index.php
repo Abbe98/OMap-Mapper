@@ -1,5 +1,26 @@
 <?php
 include 'core/int.php';
+
+if (empty($_POST) === false) {
+
+	if($_FILES['map']['error'] > 0) {
+		die('Error: An error ocurred when uploading.');
+	}
+
+	if($_FILES['map']['size'] > 4194304){
+		die('Error: File uploaded exceeds maximum upload size.');
+	}
+
+	if(file_exists('usercontent/' . $_FILES['map']['name'])){
+		die('Error: File with that name already exists.');
+	}
+
+	if(!move_uploaded_file($_FILES['map']['tmp_name'], 'usercontent/' . $_FILES['map']['name'])){
+		die('Error: Uploading file - check that destination is writeable.');
+	}
+}
+
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -30,15 +51,11 @@ include 'core/int.php';
 				<div role="button" onclick="location.href='https://github.com'"><span class="icon-bug"></span><span>Report Bugs</span></div><!-- fix link when public -->
 			</div>
 			<div id="aside_new">
-				<form action="" method="post" name="new" onsubmit="return validateForm()">
+				<form action="" method="post" name="new" onsubmit="return validateForm()" enctype="multipart/form-data">
 					<label>Name:* <input type="text" name="name" /></label><br>
 					<label>Date: <input type="date" name="date" /></label><br>
 					<label>Location:* <input type="text" value="" class="hide" name="location" /><input type="button" id="locationselector" onclick="getLocation();" value="Location"/></label><br>
-					<label>Map: <input type="file" name="map1" /></label><br>
-					<label>Map: <input type="file" name="map2" /></label><br>
-					<label>Map: <input type="file" name="map3" /></label><br>
-					<label>Map: <input type="file" name="map4" /></label><br>
-					<label>Map: <input type="file" name="map5" /></label><br>
+					<label>Map: <input type="file" name="map" accept="image/x-png, image/jpeg" /></label><br>
 					<input type="submit" value="Save" />
 				</form>
 			</div>

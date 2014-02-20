@@ -27,13 +27,12 @@ function getLocation() {
 
   m.style.cursor = 'crosshair';
   btn.value = 'Click a location on the map.';
-  
 
   map.on('click', function(e) {
     var l = e.latlng.toString();
     l = l.substr(0, l.length-1);
     l = l.substr(7);
-    
+
     document.forms['new']['location'].value = l;
     btn.value = l;
     m.style.cursor = 'move';
