@@ -53,7 +53,7 @@ if (empty($_POST) === false) {
 		</nav>
 		<aside>
 			<div id="aside_main">
-				<div role="button" onclick="toggleNew('aside_main', 'aside_new')"><span class="icon-compass"></span><span>New</span></div>
+				<div role="button" onclick="toggle('aside_main', 'aside_new')"><span class="icon-compass"></span><span>New</span></div>
 				<div role="button"><span class="icon-bookmark"></span><span>About</span></div><!-- force about -->
 				<div role="button" onclick="location.href='https://github.com'"><span class="icon-github"></span><span>Source Code</span></div><!-- fix link when public -->
 				<div role="button"><span class="icon-cog"></span><span>Settings</span></div><!-- force settings -->
@@ -69,6 +69,11 @@ if (empty($_POST) === false) {
 				</form>
 			</div>
 		</aside>
+		<section id="about">
+			<span class="close">X</span>
+			<h1>About</h1>
+			<p>OMap Mapper is developed by Albin Larsson. Current version: <?php echo $GLOBALS['config']['v']; ?>.</p>
+		</section>
 		<div id="map"></div>
 
 		<!-- Load JS Resources -->
