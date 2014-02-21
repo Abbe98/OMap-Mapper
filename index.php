@@ -7,15 +7,11 @@ if (empty($_POST) === false) {
 		die('Error: An error ocurred when uploading.');
 	}
 
-	if($_FILES['map']['size'] > 4194304){
-		die('Error: File uploaded exceeds maximum upload size.');
-	}
-
-	if(file_exists('usercontent/' . $_FILES['map']['name'])){
+	if(file_exists('usercontent/' . $_FILES['map']['name'])) {
 		die('Error: File with that name already exists.');
 	}
 
-	if(!move_uploaded_file($_FILES['map']['tmp_name'], 'usercontent/' . $_FILES['map']['name'])){
+	if(!move_uploaded_file($_FILES['map']['tmp_name'], 'usercontent/' . $_FILES['map']['name'])) {
 		die('Error: Uploading file - check that destination is writeable.');
 	}
 
@@ -78,15 +74,6 @@ if (empty($_POST) === false) {
 			<span class="close" onclick="openClose('settings');">X</span>
 			<h1>Settings</h1>
 			<p>Nothing here yet... :-(</p>
-			<?php
-$database = Database::getInstanse();
-
-$database ->query("SELECT `map`, `name`, `location`, `date` FROM `locations`");
-$rows = $database->resultset();
-echo "<pre>";
-print_r($rows);
-echo "</pre>";
-			?>
 		</section>
 		<div id="map"></div>
 

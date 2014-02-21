@@ -16,6 +16,4 @@ $GLOBALS['config'] = array(
   /* Version do not edit this variable! */
   'v' => '0.0.1'
   );
-
-
 ?>
