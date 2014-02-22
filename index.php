@@ -68,7 +68,9 @@ if (empty($_POST) === false) {
 		<section id="about">
 			<span class="close" onclick="openClose('about');">X</span>
 			<h1>About</h1>
-			<p>OMap Mapper is developed by Albin Larsson. Current version: <?php echo $GLOBALS['config']['v']; ?>.</p>
+			<p>OMap Mapper is licensed under the <a target="_blank" href="#">MIT</a> license and the source code can be found on <a target="_blank" href="#">Github</a>.</p>
+			<p>If you found any unreported bugs please report them in our <a target="_blank" href="#">Bug Tracker</a>. The OMap Mapper <a target="_blank" href="#">wiki</a> on Github provides documentation and help.</p>
+			<p>Current version: <?php echo $GLOBALS['config']['v']; ?>.</p>
 		</section>
 		<section id="settings">
 			<span class="close" onclick="openClose('settings');">X</span>
@@ -83,8 +85,7 @@ if (empty($_POST) === false) {
 		</section>
 		<div id="map"></div>
 
-		<!-- Load JS Resources -->
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+		<script src="js/leaflet.js"></script>
 		<script src="js/leaflet.markercluster.js"></script>
 		<script src="geojsonp_data.php"></script>
 		<script src="js/app.js"></script>
