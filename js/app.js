@@ -1,3 +1,30 @@
+var map = L.map('map', {
+  zoomControl: false
+});
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="http://openstr">OpenStreetMap</a> contributors.'
+}).addTo(map);
+
+var markers = L.markerClusterGroup();
+var geoJsonLayer = L.geoJson(geoJsonData, {
+  onEachFeature: function (feature, layer) {
+    layer.on('click', function (e) {
+      var id = feature.id;
+      var name = feature.properties.name;
+      var date = feature.properties.date;
+      var map = feature.properties.map;
+
+    showMap(id, name, date, map);
+
+    });
+  }
+});
+
+markers.addLayer(geoJsonLayer);
+map.addLayer(markers);
+
+map.fitBounds(markers.getBounds());
+
 function openClose(element1) {
   var e = document.getElementById(element1);
   if(e.offsetWidth > 0 || e.offsetHeight > 0) {

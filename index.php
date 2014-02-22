@@ -85,32 +85,8 @@ if (empty($_POST) === false) {
 
 		<!-- Load JS Resources -->
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-		<script src="js/map_config.js"></script>
 		<script src="js/leaflet.markercluster.js"></script>
 		<script src="geojsonp_data.php"></script>
-		<script src="js/functions.js"></script>
-
-		<script>
-		var markers = L.markerClusterGroup();
-		var geoJsonLayer = L.geoJson(geoJsonData, {
-			onEachFeature: function (feature, layer) {
-				layer.on('click', function (e) {
-					var id = feature.id;
-					var name = feature.properties.name;
-					var date = feature.properties.date;
-					var map = feature.properties.map;
-
-					showMap(id, name, date, map);
-
-				});
-			}
-		});
-
-		markers.addLayer(geoJsonLayer);
-		map.addLayer(markers);
-
-		//center map by markers
-		map.fitBounds(markers.getBounds());
-		</script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
