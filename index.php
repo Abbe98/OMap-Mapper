@@ -75,6 +75,12 @@ if (empty($_POST) === false) {
 			<h1>Settings</h1>
 			<p>Nothing here yet... :-(</p>
 		</section>
+		<section id="show">
+			<span class="close" onclick="showClose();">X</span>
+			<h1 id="showH"></h1>
+			<img id="showI" src="" alt="Map"/>
+			<p id="showP"></p>
+		</section>
 		<div id="map"></div>
 
 		<!-- Load JS Resources -->
@@ -86,7 +92,20 @@ if (empty($_POST) === false) {
 
 		<script>
 		var markers = L.markerClusterGroup();
-		var geoJsonLayer = L.geoJson(geoJsonData);
+		var geoJsonLayer = L.geoJson(geoJsonData, {
+			onEachFeature: function (feature, layer) {
+				layer.on('click', function (e) {
+					var id = feature.id;
+					var name = feature.properties.name;
+					var date = feature.properties.date;
+					var map = feature.properties.map;
+
+					showMap(id, name, date, map);
+
+				});
+			}
+		});
+
 		markers.addLayer(geoJsonLayer);
 		map.addLayer(markers);
 

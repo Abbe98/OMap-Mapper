@@ -19,12 +19,11 @@ function toggle(element1, element2) {
   }
 }
 
-//vadilate input
 function validateForm() {
   var n = document.forms['new']['name'].value;
   var l = document.forms['new']['location'].value;
 
-  if (n == null || n == '' || l == null || l == '') {
+  if(n == null || n == '' || l == null || l == '') {
     alert('Name and location is required!');
     return false;
   }
@@ -46,4 +45,43 @@ function getLocation() {
     btn.value = l;
     m.style.cursor = 'move';
   });
+}
+
+function showMap(id, name, date, map) {
+
+  if(date === '') {
+    date = false;
+  }
+
+  if(map ==='') {
+    map = false;
+  }
+
+  var eshow = document.getElementById('show');
+  var etitle = document.getElementById('showH');
+  var eimage = document.getElementById('showI');
+  var edate = document.getElementById('showP');
+
+  eshow.style.display = 'block';
+  etitle.innerHTML = name;
+
+  if(map != false) {
+    eimage.style.display = 'inline';
+    eimage.src = 'usercontent/' + map;
+  } else {
+    eimage.style.display = 'none';
+  }
+
+  if(date != false) {
+    edate.style.display = 'block';
+    edate.innerHTML = date;
+  } else {
+    edate.style.display = 'none';
+  }
+}
+
+function showClose() {
+  var eshow = document.getElementById('show');
+
+  eshow.style.display = 'none';
 }
