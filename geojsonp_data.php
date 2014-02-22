@@ -16,7 +16,7 @@ echo '
 	';
 
 if ($rowcount < 1) {
-	echo '{ "type": "Feature", "id":"0", "geometry": { "type": "Point", "coordinates": [16.4888, 59.15008] } }';
+	echo '{ "type": "Feature", "id":"0", "geometry": { "type": "Point", "coordinates": [16.4888, 59.15008] } "properties": { "name": "Example", "date": "2014-02-20", "map": "_example" } }';
 } else {
 	$i = 0;
 	while ($i <= $rowcount -1) {
