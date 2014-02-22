@@ -49,7 +49,7 @@ if (empty($_POST) === false) {
 		</nav>
 		<aside>
 			<div id="aside_main">
-				<div role="button" onclick="toggle('aside_main', 'aside_new')"><span class="icon-compass"></span><span>New</span></div>
+				<div role="button" onclick="toggle('aside_main', 'aside_new');"><span class="icon-compass"></span><span>New</span></div>
 				<div role="button"><span class="icon-bookmark" onclick="openClose('about');"></span><span>About</span></div>
 				<div role="button" onclick="location.href='https://github.com'"><span class="icon-github"></span><span>Source Code</span></div><!-- fix link when public -->
 				<div role="button"><span class="icon-cog" onclick="openClose('settings');"></span><span>Settings</span></div>
@@ -63,6 +63,7 @@ if (empty($_POST) === false) {
 					<label>Map: <input type="file" name="map" accept="image/x-png, image/jpeg" /></label><br>
 					<input type="submit" value="Save" />
 				</form>
+				<button onClick="toggle('aside_main', 'aside_new');">Back</button>
 			</div>
 		</aside>
 		<section id="about">
