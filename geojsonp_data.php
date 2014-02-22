@@ -23,7 +23,7 @@ if ($rowcount < 1) {
 		$location = $rows[$i]['location'];
 		$lonlat = explode(', ', $location);
 
-		echo '{ "type": "Feature", "id":"' . $rows[$i]['id'] . '", "geometry": { "type": "Point", "coordinates": [' . $lonlat[1] . ',' . $lonlat[0] . '] }, "properties": { "name": "' . $rows[$i]['name'] . '", "date": "' . $rows[$i]['date'] . '" } }';
+		echo '{ "type": "Feature", "id":"' . $rows[$i]['id'] . '", "geometry": { "type": "Point", "coordinates": [' . $lonlat[1] . ',' . $lonlat[0] . '] }, "properties": { "name": "' . $rows[$i]['name'] . '", "date": "' . $rows[$i]['date'] . '", "map": "' . $rows[$i]['map'] .'" } }';
 
 		if ($i != $rowcount -1) {
 			echo ', ';
