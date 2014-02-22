@@ -219,4 +219,4 @@ pip-log.txt
 #############
 
 usercontent/*
-!example.jpg
+!_example.jpg
