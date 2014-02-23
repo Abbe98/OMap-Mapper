@@ -17,6 +17,7 @@ A map logger and visualization tool for orienteering maps. Setup a database for 
  - [Leaflet][2]
  - [Leaflet Markercluster][3]
  - [Open Street Map][4]
+ - [Icomoon Icons][5]
 
 **Licensed under MIT.**
 
@@ -24,3 +25,4 @@ A map logger and visualization tool for orienteering maps. Setup a database for 
 [2]: http://leafletjs.com
 [3]: https://github.com/Leaflet/Leaflet.markercluster
 [4]: https://www.openstreetmap.org/
+[5]: http://icomoon.io/#icons
