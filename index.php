@@ -51,9 +51,9 @@ if (empty($_POST) === false) {
 			<div id="aside_main">
 				<div role="button" onclick="toggle('aside_main', 'aside_new');"><span class="icon-compass"></span><span>New</span></div>
 				<div role="button"><span class="icon-bookmark" onclick="openClose('about');"></span><span>About</span></div>
-				<div role="button" onclick="location.href='https://github.com'"><span class="icon-github"></span><span>Source Code</span></div><!-- fix link when public -->
+				<div role="button" onclick="location.href='https://github.com/Abbe98/OMap-Mapper'"><span class="icon-github"></span><span>Source Code</span></div>
 				<div role="button"><span class="icon-cog" onclick="openClose('settings');"></span><span>Settings</span></div>
-				<div role="button" onclick="location.href='https://github.com'"><span class="icon-bug"></span><span>Report Bugs</span></div><!-- fix link when public -->
+				<div role="button" onclick="location.href='https://github.com/Abbe98/OMap-Mapper/issues'"><span class="icon-bug"></span><span>Report Bugs</span></div>
 			</div>
 			<div id="aside_new">
 				<form action="" method="post" name="new" onsubmit="return validateForm()" enctype="multipart/form-data">
@@ -69,8 +69,8 @@ if (empty($_POST) === false) {
 		<section id="about">
 			<span class="close" onclick="openClose('about');">X</span>
 			<h1>About</h1>
-			<p>OMap Mapper is licensed under the <a target="_blank" href="#">MIT</a> license and the source code can be found on <a target="_blank" href="#">Github</a>.</p>
-			<p>If you found any unreported bugs please report them in our <a target="_blank" href="#">Bug Tracker</a>. The OMap Mapper <a target="_blank" href="#">wiki</a> on Github provides documentation and help.</p>
+			<p>OMap Mapper is licensed under the <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper/blob/master/LICENSE">MIT</a> license and the source code can be found on <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper">Github</a>.</p>
+			<p>If you found any unreported bugs please report them in our <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper/issues">Bug Tracker</a>. The OMap Mapper <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper/wiki">wiki</a> on Github provides documentation and help.</p>
 			<p>Current version: <?php echo $GLOBALS['config']['v']; ?>.</p>
 		</section>
 		<section id="settings">

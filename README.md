@@ -13,13 +13,11 @@ A map logger and visualization tool for orienteering maps. Setup a database for 
  - Chrome
  - Firefox(not recommended)
 
- ---
 ##Open source/open data projects used by OMap Mapper:
  - [Leaflet][2]
  - [Leaflet Markercluster][3]
  - [Open Street Map][4]
 
- ---
 **Licensed under MIT.**
 
 [1]: https://raw2.github.com/Abbe98/abbe98.github.com/master/assets/omapmapper2.jpg
