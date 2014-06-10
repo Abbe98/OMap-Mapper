@@ -71,7 +71,7 @@ if (empty($_POST) === false) {
 			<h1>About</h1>
 			<p>OMap Mapper is licensed under the <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper/blob/master/LICENSE">MIT</a> license and the source code can be found on <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper">Github</a>.</p>
 			<p>If you found any unreported bugs please report them in our <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper/issues">Bug Tracker</a>. The OMap Mapper <a target="_blank" href="https://github.com/Abbe98/OMap-Mapper/wiki">wiki</a> on Github provides documentation and help.</p>
-			<p>Current version: <?php echo $GLOBALS['config']['v']; ?>.</p>
+			<p>Current version: <?php echo $version; ?>.</p>
 		</section>
 		<section id="settings">
 			<span class="close" onclick="openClose('settings');">X</span>

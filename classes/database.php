@@ -1,11 +1,15 @@
 <?php
 class Database {
+	private $host = DB_HOST;
+	private $user = DB_USER;
+	private $pass = DB_PASS;
+	private $dbname = DB_NAME;
 	private static $_instance = null;
 	private $stmt;
 
 	public function __construct(){
 		try {
-			$this->dbhost = new PDO('mysql:host=' . $GLOBALS['config']['host'] . ';dbname=' . $GLOBALS['config']['dbname'], $GLOBALS['config']['username'], $GLOBALS['config']['password']);
+			$this->dbhost = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname, $this->user, $this->pass);
 		} catch(PDOException $e){
 			$this->error = $e->getMessage();
 		}
