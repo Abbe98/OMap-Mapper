@@ -78,7 +78,7 @@ if (empty($_POST) === false) {
 			<h1>Settings</h1>
 			<p>Nothing here yet... :-(</p>
 			<h2>Export</h2>
-			<button onclick="location.href='export.php'">GeoJSON(P)</button>
+			<button onclick="location.href='export.php'">GeoJSON</button>
 		</section>
 		<section id="show">
 			<span class="close" onclick="showClose();">X</span>
