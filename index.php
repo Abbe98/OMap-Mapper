@@ -78,7 +78,7 @@ if (empty($_POST) === false) {
 			<h1>Settings</h1>
 			<p>Nothing here yet... :-(</p>
 			<h2>Export</h2>
-			<button onclick="location.href='export.php'">GeoJSON</button>
+			<button onclick="location.href='geojson_data.php?export=true'">GeoJSON</button>
 		</section>
 		<section id="show">
 			<span class="close" onclick="showClose();">X</span>
@@ -90,7 +90,7 @@ if (empty($_POST) === false) {
 
 		<script src="js/leaflet.js"></script>
 		<script src="js/leaflet.markercluster.js"></script>
-		<script src="geojsonp_data.php"></script>
+		<script src="geojson_data.php"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
