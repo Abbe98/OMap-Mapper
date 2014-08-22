@@ -9,7 +9,6 @@ define("DB_USER", 'root');
 define('DB_PASS', '');
 
 /* MariaDB or MySQL database name */
-define('DB_NAME', 'omm');
+define('DB_NAME', 'omm2');
 
-$version = '0.1.0';
-?>
+define('OMM_VERSION', '0.01');

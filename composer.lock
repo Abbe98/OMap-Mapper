@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "332528dcb3e776a3d4f9a2ef58d3b530",
+    "packages": [
+        {
+            "name": "abbe98/simple-pdo",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Abbe98/Simple-PDO.git",
+                "reference": "0f5425402fff51638061aef4b33c148843096aa1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Abbe98/Simple-PDO/zipball/0f5425402fff51638061aef4b33c148843096aa1",
+                "reference": "0f5425402fff51638061aef4b33c148843096aa1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "simple-pdo": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albin Larsson",
+                    "homepage": "http://abbe98.github.io/"
+                }
+            ],
+            "description": "A simpe PDO class for MariaDB and MySQL",
+            "homepage": "https://github.com/Abbe98/Simple-PDO",
+            "keywords": [
+                "database",
+                "mariadb",
+                "mysql",
+                "pdo"
+            ],
+            "time": "2014-08-11 11:12:05"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "prefer-stable": false,
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
