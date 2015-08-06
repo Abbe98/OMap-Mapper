@@ -1,38 +1,38 @@
 <?php
 class User {
-  private function user_password_verify_with_rehash($password, $hash, $username) {
+  private function userPasswordVerifyWithRehash($password, $hash, $username) {
 
   }
 
-  private function username_exists($username) {
+  private function usernameExists($username) {
 
   }
 
-  public function logged_in() {
+  public function loggedIn() {
 
   }
 
-  public function sign_in($username, $password) {
+  public function signIn($username, $password) {
 
   }
 
-  public function sign_out() {
+  public function signOut() {
 
   }
 
-  public function userid_from_username($username) {
+  public function userIdFromUsername($username) {
 
   }
 
-  public function new_user($username, $password) {
+  public function newUser($username, $password) {
 
   }
 
-  public function delete_user() {
+  public function deleteUser() {
 
   }
 
-  public function update_password() {
+  public function updatePassword() {
 
   }
 }

@@ -222,4 +222,3 @@ composer.phar
 vendor/
 
 usercontent/*
-!_example.jpg

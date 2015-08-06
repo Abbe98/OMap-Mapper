@@ -1,5 +1,5 @@
 {
   "require": {
-    "abbe98/simple-pdo": "1.0.*"
+    "abbe98/simple-pdo": "2.0.0"
   }
 }

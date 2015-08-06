@@ -1,14 +1,14 @@
 <?php
 /* MariaDB or MySQL host */
-define('DB_HOST', '127.0.0.1');
+define('HOST', '127.0.0.1');
 
 /* MariaDB or MySQL username */
-define("DB_USER", 'root');
+define('USERNAME', 'root');
 
 /* MariaDB or MySQL user password */
-define('DB_PASS', '');
+define('PASSWORD', '');
 
 /* MariaDB or MySQL database name */
-define('DB_NAME', 'omm2');
+define('DBNAME', 'omm2');
 
 define('OMM_VERSION', '0.01');
