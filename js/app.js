@@ -1,6 +1,7 @@
 var map = L.map('map', {
   zoomControl: false
 });
+
 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data &copy; <a href="http://openstr">OpenStreetMap</a> contributors.'
 }).addTo(map);
@@ -15,7 +16,6 @@ var geoJsonLayer = L.geoJson(geoJsonData, {
       var map = feature.properties.map;
 
     showMap(id, name, date, map);
-
     });
   }
 });
@@ -27,7 +27,7 @@ map.fitBounds(markers.getBounds());
 
 function openClose(element1) {
   var e = document.getElementById(element1);
-  if(e.offsetWidth > 0 || e.offsetHeight > 0) {
+  if (e.offsetWidth > 0 || e.offsetHeight > 0) {
     e.style.display = 'none';
   } else {
     e.style.display = 'block';
@@ -37,7 +37,7 @@ function openClose(element1) {
 function toggle(element1, element2) {
   var e = document.getElementById(element1);
   var se = document.getElementById(element2);
-  if(e.offsetWidth > 0 || e.offsetHeight > 0) {
+  if (e.offsetWidth > 0 || e.offsetHeight > 0) {
     e.style.display = 'none';
     se.style.display = 'block';
   } else {
@@ -50,7 +50,7 @@ function validateForm() {
   var n = document.forms['new']['name'].value;
   var l = document.forms['new']['location'].value;
 
-  if(n == null || n == '' || l == null || l == '') {
+  if (n == null || n == '' || l == null || l == '') {
     alert('Name and location is required!');
     return false;
   }
@@ -76,11 +76,11 @@ function getLocation() {
 
 function showMap(id, name, date, map) {
 
-  if(date === '') {
+  if (date === '') {
     date = false;
   }
 
-  if(map ==='') {
+  if (map === '') {
     map = false;
   }
 
@@ -92,14 +92,14 @@ function showMap(id, name, date, map) {
   eshow.style.display = 'block';
   etitle.innerHTML = name;
 
-  if(map != false) {
+  if (map != false) {
     eimage.style.display = 'inline';
     eimage.src = 'usercontent/' + map;
   } else {
     eimage.style.display = 'none';
   }
 
-  if(date != false) {
+  if (date != false) {
     edate.style.display = 'block';
     edate.innerHTML = date;
   } else {
@@ -109,6 +109,5 @@ function showMap(id, name, date, map) {
 
 function showClose() {
   var eshow = document.getElementById('show');
-
   eshow.style.display = 'none';
 }

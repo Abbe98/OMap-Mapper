@@ -2,85 +2,85 @@
 *** Main styles and normalizations.
 */
 html, body, #map {
-	height: 100%;
-	margin: 0;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.42857;
-	color: rgb(51, 51, 51);
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: rgb(51, 51, 51);
 }
 
 aside, nav {
-	display: block;
-	position: fixed;
-	background-color: white;
-	z-index: 1;
+  display: block;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
 }
 
 * {
-	-webkit-transition: .4s;
-	-moz-transition: .4s;
-	transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  transition: .4s;
 }
 
 /*
 *** Links
 */
 a {
-	text-decoration: none;
-	color: #F76D22;
+  text-decoration: none;
+  color: #F76D22;
 }
 
 /*
 *** Navbar
 */
 nav {
-	height: 40px;
-	width: 100%;
-	
-	-webkit-box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
-	-moz-box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
-	box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
+  height: 40px;
+  width: 100%;
+  
+  -webkit-box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
+  -moz-box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
+  box-shadow: inset 0px -2px 1px 0px rgba(247, 109, 34, 1);
 }
 
 nav ul,
 nav ul li {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 li {
-	display: block;
-	width: auto;
-	float: left;
+  display: block;
+  width: auto;
+  float: left;
 }
 
 nav ul li {
-	padding: 10.5px 20px;
-	font-size: 120%;
-	float: right;
+  padding: 10.5px 20px;
+  font-size: 120%;
+  float: right;
 }
 li:first-child {
-	float: left;
-	font-weight: 800;
+  float: left;
+  font-weight: 800;
 }
 
 li:not(:first-child):hover {
-	color: #F76D22;
-	cursor: pointer;
+  color: #F76D22;
+  cursor: pointer;
 }
 
 /*
 *** Side
 */
 aside {
-	height: 100%;
-	margin-top: 40px;
-	width: 20%;
-	
-	-webkit-box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
-	-moz-box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
-	box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
+  height: 100%;
+  margin-top: 40px;
+  width: 20%;
+  
+  -webkit-box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
+  -moz-box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
+  box-shadow: inset -2px 0px 1px 0px rgba(247, 109, 34, 1);
 }
 
 /*
@@ -88,34 +88,34 @@ aside {
 */
 
 aside div[role="button"] {
-	float: left;
-	margin: 20px;
+  float: left;
+  margin: 20px;
 }
 
 aside div[role="button"]:hover {
-	color: #F76D22;
-	cursor: pointer;
+  color: #F76D22;
+  cursor: pointer;
 }
 
 aside div[role="button"] span:first-child {
-	font-size: 900%;
+  font-size: 900%;
 }
 
 aside div[role="button"] span:last-child {
-	display: block;
-	text-align: center;
+  display: block;
+  text-align: center;
 }
 
 aside form {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 
 #aside_new {
-	display: none;
+  display: none;
 }
 
 #aside_main {
-	display: block;
+  display: block;
 }
 
 /*
@@ -123,110 +123,110 @@ aside form {
 */
 
 section {
-	position: fixed;
-	margin-right: 25%;
-	margin-left: 25%;
-	margin-top: 7%;
-	width: 50%;
-	background-color: white;
-	padding: 5px;
-	border: 2px solid #F76D22;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	z-index: 3;
+  position: fixed;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 7%;
+  width: 50%;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #F76D22;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 3;
 }
 
 section .close {
-	float: right;
-	font-weight: 800;
+  float: right;
+  font-weight: 800;
 }
 
 section .close:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 section h1 {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 #about,
 #settings,
 #show {
-	display: none;
-	overflow: auto;
+  display: none;
+  overflow: auto;
 }
 
 #show img {
-	max-width: 100%;
-	max-height: 75%;
+  max-width: 100%;
+  max-height: 75%;
 }
 
 #show #showP {
-	clear: both;
+  clear: both;
 }
 
 /*
 *** Icons
 */
 @font-face {
-	font-family: 'icons';
-	src:url('fonts/icons.woff');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icons';
+  src:url('fonts/icons.woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'icons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-github:before {
-	content: "\e600";
+  content: "\e600";
 }
 .icon-map:before {
-	content: "\e601";
+  content: "\e601";
 }
 .icon-compass:before {
-	content: "\e602";
+  content: "\e602";
 }
 .icon-location:before {
-	content: "\e603";
+  content: "\e603";
 }
 .icon-cog:before {
-	content: "\e604";
+  content: "\e604";
 }
 .icon-bug:before {
-	content: "\e605";
+  content: "\e605";
 }
 .icon-rocket:before {
-	content: "\e606";
+  content: "\e606";
 }
 .icon-lab:before {
-	content: "\e607";
+  content: "\e607";
 }
 
 .icon-bookmark:before {
-	content: "\e608";
+  content: "\e608";
 }
 
 /*
 *** Other
 */
 .hide {
-	display: none;
+  display: none;
 }
 
 /* overwrite leaflet styles */
 #map,
 .leaflet-dragging.leaflet-container,
 .leaflet-dragging .leaflet-clickable {
-	cursor: move;
+  cursor: move;
 }
